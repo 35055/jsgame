@@ -63,12 +63,12 @@ function sizeBall(){
 function createBall () {
     let element = document.createElement('div');
     let info = block.getBoundingClientRect();
-    let size = 50;
+    let size = sizeBall();
     let x = random(0, info.width - size);
     let y = random(0, info.height - size);
     
-    element.style.width = sizeBall() + 'px';
-    element.style.height = sizeBall() + 'px';
+    element.style.width = size + 'px';
+    element.style.height = size + 'px';
     element.style.top = y + 'px';
     element.style.left = x + 'px';
     element.style.background = `rgb(${color()},${color()},${color()})`;
